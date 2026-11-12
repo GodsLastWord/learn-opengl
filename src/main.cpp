@@ -34,7 +34,7 @@ int main() {
 
     glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-    Shader shader{ "src/shaders/vertex.glsl", "src/shaders/fragment.glsl" };
+    Shader shader{ "shaders/vertex.glsl", "shaders/fragment.glsl" };
 
     // clang-format off
     float vertices[] {
