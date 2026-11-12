@@ -18,5 +18,6 @@ target_include_directories(main PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 add_subdirectory("${EXTERNAL_LIBRARIES}/glfw")
 add_subdirectory("${EXTERNAL_LIBRARIES}/glad")
+add_subdirectory("${EXTERNAL_LIBRARIES}/stb_image")
 
-target_link_libraries(main PRIVATE glfw glad)
+target_link_libraries(main PRIVATE glfw glad stb_image)
