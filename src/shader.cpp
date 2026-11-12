@@ -7,13 +7,16 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmnetS
     std::string vertexShaderCode;
     std::string fragmentShaderCode;
 
-    std::ifstream vertexFile{ vertexShaderPath };
-    std::ifstream fragmentFile{ fragmnetShaderPath };
+    std::ifstream vertexFile;
+    std::ifstream fragmentFile;
 
     vertexFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     fragmentFile.exceptions(std::ifstream::failbit | std::ifstream::badbit);
 
     try {
+        vertexFile.open(vertexShaderPath);
+        fragmentFile.open(fragmnetShaderPath);
+
         std::stringstream vertexStream;
         std::stringstream fragmentStream;
 
